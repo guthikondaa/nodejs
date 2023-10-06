@@ -15,7 +15,7 @@ pipeline {
                 sh 'npm install'
             }
         }
-
+        }
     }
 }
 
