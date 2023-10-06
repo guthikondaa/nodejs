@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        nodejs 'nodejs 15.2.1'
+        nodejs 'Nodejs 15.2.1'
     }
     stages {
         stage('Clone Repository'){
