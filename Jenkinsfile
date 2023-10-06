@@ -13,9 +13,9 @@ pipeline {
         
         stage('Install Dependencies'){
             steps {
-                nodejs(nodeJSInstallationName: 'nodejs20.8.0') {
+                
                 sh 'npm install'
-            }
+            
         }
         }
     }
