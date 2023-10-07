@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    // tools {
-    //     nodejs "Nodejs"
-    // }
+    tools {
+     nodejs "Nodejs"
+     }
     stages {
         stage('Clone Repository'){
             steps{
@@ -14,9 +14,8 @@ pipeline {
         stage('Install Dependencies'){
             steps {
                 
-                sh 'npm-v'
-                sh 'node-v'
-            
+                sh 'install nodejs'
+
         }
         }
     }
