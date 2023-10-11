@@ -1,23 +1,21 @@
 pipeline {
     agent any
-    tools {
-     nodejs "Nodejs"
-     }
+     
     stages {
         stage('Clone Repository'){
             steps{
                 git branch: 'main',
-                    url: 'https://github.com/guthikondaa/nodejs.git'
+                    url: 'https://github.com/Jsuresh47/nodejs.git'
             }
         }
         
-        stage('Install Dependencies'){
-            steps {
-                sh 'npm install'
-                sh 'npm build'
-                sh 'npm test'
+        stage("Build") {
+            steps{
+                nodejs(nodeJSInstallationName: 'nodejs18.7.1') 
+                    sh '/usr/bin/npm install'
+            }
         }
-        }
+
     }
 }
 
